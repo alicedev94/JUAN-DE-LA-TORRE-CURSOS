@@ -1,9 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;900&display=swap");
 
 :root {
-  --color-principal: #037bc0;
-  --color-secundario: #e1e1e1;
+  --color-principal: #1073ba;
+  --color-secundario: #00da55;
+  --gris: #3b3b3b;
+  --negro: #1f1e1e;
+  --blanco: #ffffff;
+  --grisClaro: #e1e1e1;
+
   --fuente-principal: "Roboto", sans-serif;
+
+  --separacion: 5rem;
 
   /* Codigo para pruebas, porfavor remover este codigo una vez el desarrollo este terminado. :TEST */
   /* :TEST Hace referencia a un bloque de codigo de pruebas */
@@ -12,31 +19,29 @@
   /* Hasta aquí.  */
 }
 
-*,
-*::before,
-*::after {
+html {
   box-sizing: border-box;
+  font-size: 62.5%; /* 1rem = 10px */
 }
 
-html {
-  font-size: 62.5%; /* 1rem = 10px */
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
 }
 
 h1 {
   font-family: var(--fuente-principal);
   font-weight: 900;
   font-style: normal;
-  font-size: 4.5rem;
-
-  /* :TEST */
-  background-color: var(--bloque-color-1);
-  /* :ENDTEST  */
+  font-size: 4.4rem;
+  margin: calc(var(--separacion) / 2) 0;
 }
 
-p {
-  /* :TEST */
-  background-color: var(--bloque-color-2);
-  /* :ENDTEST  */
+img {
+  max-width: 100%;
+  display: block;
+  height: auto;
 }
 
 body {
@@ -52,17 +57,62 @@ body {
 }
 
 .centrar-texto {
-    text-align: center;
+  text-align: center;
 }
 
-.separador {
-  margin-bottom: 5rem;
+.centrar-contenido {
+  margin: 0 auto;
 }
 
 /* Contenido de la pagina */
-.contenedor-principal {
-  background-color: var(--color-secundario);
+.contenedor {
   max-width: 120rem;
   width: 90%;
   margin: 0 auto;
+}
+
+.header {
+  background-color: var(--negro);
+  padding: calc(var(--separacion) * 3) 0;
+  color: var(--blanco);
+}
+
+.titulo {
+  font-size: 10rem;
+}
+
+.degradado-verde {
+  color: transparent;
+  background: linear-gradient(
+    to right,
+    var(--color-principal),
+    var(--color-secundario) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.tagline-producto {
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+.texto-header {
+  color: var(--blanco);
+}
+
+.texto-header p{
+  margin: 0;
+}
+
+.precio-producto span {
+  font-size: 6rem;
+  font-weight: 900;
+}
+
+@media (min-width: 768px) {
+  .contenido-header {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }

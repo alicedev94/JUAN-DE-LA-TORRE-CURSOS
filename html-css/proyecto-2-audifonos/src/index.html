@@ -8,14 +8,51 @@
     <title>Audifonos</title>
   </head>
   <body>
-    <div class="contenedor-principal">
-      <h1 class="reiniciar-estilos centrar-texto">h1 Another love</h1>
-      <p class="reiniciar-estilos">
-        P Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
-        reprehenderit, sint praesentium consequuntur eligendi nobis soluta earum
-        rem unde? Eum dolorem eaque dicta? Tenetur eos beatae quo! Dignissimos,
-        voluptas iure!
-      </p>
-    </div>
+    <header class="header">
+      <div class="contenedor contenido-header">
+        <div>
+          <picture>
+            <source
+              sizes="1920w"
+              srcset="assets/images/header.avif 1920w"
+              type="image/avif"
+            />
+            <source
+              sizes="1920w"
+              srcset="assets/images/header.webp 1920w"
+              type="image/webp"
+            />
+            <source
+              sizes="1920w"
+              srcset="assets/images/header.png 1920w"
+              type="image/jpeg"
+            />
+            <img
+              class="imagen-principal"
+              loading="lazy"
+              decoding="async"
+              src="assets/images/header.png"
+              lazyalt="imagen"
+              width="1000"
+              height="600"
+            />
+          </picture>
+        </div>
+        <!-- .imagen-header -->
+
+        <div class="texto-header">
+          <p class="tagline-producto">Sonido Profesional</p>
+          <h1 class="titulo degradado-verde">TechPRO</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis
+            saepe similique, fugit velit magnam obcaecati impedit totam nobis
+            omnis nostrum voluptates dicta pariatur sint iusto doloribus unde
+            molestias repudiandae nisi?
+          </p>
+          <p class="precio-producto">Desde <span>$200</span></p>
+        </div>
+
+      </div>
+    </header>
   </body>
 </html>
